@@ -46,6 +46,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <hadoop.version2>2.0.0-cdh4.4.0</hadoop.version2>
+    <hadoop.version>0.23.10</hadoop.version>
   </properties>
 
   <build>
@@ -115,12 +116,12 @@
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-common</artifactId>
-      <version>${hadoop.version2}</version>
+      <version>${hadoop.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-client</artifactId>
-      <version>${hadoop.version2}</version>
+      <version>${hadoop.version}</version>
     </dependency>
     <!-- End: Hadoop-related dependencies -->
 
