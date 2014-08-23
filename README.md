@@ -47,6 +47,13 @@ To prepare the corpus into the internal format used by Mr.LDA, run the following
 ```
 hadoop jar target/mrlda-0.9.0-SNAPSHOT-fatjar.jar cc.mrlda.ParseCorpus \
  -input ap-sample.txt -output ap-sample-parsed
+ 
+yarn jar ~/Workspace/mrlda-0.9.0-SNAPSHOT-fatjar.jar \
+ cc.mrlda.ParseCorpus \
+ -Dmapred.job.queue.name=adhoc \
+ -Dmapred.child.java.opts=-Xmx1024M \
+ -input /user/kezhai/input/example/mrlda/ \
+ -output /user/kezhai/input/example/parse
 ```
 
 When you examine the output, you'll see:
