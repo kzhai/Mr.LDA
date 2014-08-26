@@ -343,7 +343,7 @@ public class VariationalInference extends Configured implements Tool {
             // 0,
             // PairOfIntFloat.class, HashMap.class, true, true);
           } else {
-            betaDir = FileMerger.mergeSequenceFiles(new Configuration(), betaGlobDir, betaPath
+            betaDir = FileMerger.mergeSequenceFiles(configuration, betaGlobDir, betaPath
                 + (iterationCount + 1), reducerTasks, PairOfIntFloat.class, HMapIDW.class, true,
                 true);
             // betaDir = FileMerger.mergeSequenceFiles(betaGlobDir, betaPath + (iterationCount + 1),
@@ -354,7 +354,7 @@ public class VariationalInference extends Configured implements Tool {
             // reducerTasks, PairOfIntFloat.class, HashMap.class, true, true);
           }
         }
-        
+
         // merge gamma (for alpha update) first and move document to the correct directory
         if (!randomStartGamma || !training) {
           gammaDir = inputDir;

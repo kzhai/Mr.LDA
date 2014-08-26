@@ -198,7 +198,7 @@ The output is a set of parameters in sequence file format. In your output folder
 
 To display the top 20 ranked words of each topic, access 'beta-*' file using following command
 
-    hadoop jar Mr.LDA.jar cc.mrlda.DisplayTopic -input /hadoop/mrlda/output/directory/beta-* -term /hadoop/index/document/output/document/term -topdisplay 20
+    hadoop jar Mr.LDA.jar cc.mrlda.DisplayTopic -input /hadoop/mrlda/output/directory/beta-* -index /hadoop/index/document/output/document/term -topdisplay 20
 
 Please set the '-topdisplay' to an extremely large value to display all the words in each topic. Note that the output scores are sorted and in log scale.
 

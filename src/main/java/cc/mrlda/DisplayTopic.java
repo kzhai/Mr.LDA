@@ -55,7 +55,7 @@ public class DisplayTopic extends Configured implements Tool {
       CommandLine line = parser.parse(options, args);
 
       if (line.hasOption(Settings.HELP_OPTION)) {
-        formatter.printHelp(ParseCorpus.class.getName(), options);
+        formatter.printHelp(DisplayTopic.class.getName(), options);
         System.exit(0);
       }
 
